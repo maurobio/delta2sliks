@@ -18,7 +18,7 @@
 //                                                                             //
 //   Requirements:                                                             //
 //      GNU g++ compiler v3.x or higher                                        //
-//      tDelta Class Library by Denis Ziegler                                  // 
+//      tDelta Class Library v0.20.2 by Denis Ziegler                          // 
 //      with amendments by Guillaume Rousse and Bastiaan Wakkie                // 
 //      available from                                                         //  
 //      https://sourceforge.net/projects/freedelta/files/deltalib/new/         //
@@ -138,7 +138,7 @@ int main(int argc, char** argv) {
 	delete Dataset;
     
     // Generate CONFOR directives file to exclude numeric and text characters
-	ofstream dirfile;
+    ofstream dirfile;
     dirfile.open("delchars", ios::out); // Just yet another way of opening a file
     dirfile << "*SHOW ~ Translate into DELTA format, omitting numeric and text characters\n" << endl;
     dirfile << "*LISTING FILE delchars.lst\n" << endl;
@@ -151,14 +151,18 @@ int main(int argc, char** argv) {
     dirfile << "#CHARACTER LIST" << endl;
     dirfile << "*INPUT FILE chars_viola\n" << endl;
     dirfile << "*OUTPUT FILE items.new" << endl;
-	dirfile << "*OUTPUT PARAMETERS\n" << endl;
-	dirfile << "#ITEM DESCRIPTIONS" << endl;
-	dirfile << "*INPUT FILE items_viola";
-	dirfile.close();
+    dirfile << "*OUTPUT PARAMETERS\n" << endl;
+    dirfile << "#ITEM DESCRIPTIONS" << endl;
+    dirfile << "*INPUT FILE items_viola";
+    dirfile.close();
 	
-	// Run CONFOR to exclude numeric and text characters
+    // Run CONFOR to exclude numeric and text characters
+    #if defined(_WIN32) 
 	int result = system("confor delchars");
-	if (result != 0) {
+	#elif defined(__linux__)	
+    int result = system("./confor delchars");
+    #endif
+    if (result != 0) {
         cout << "Error: CONFOR execution failed!" << endl;
         return 1;
     }

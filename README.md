@@ -1,5 +1,5 @@
 # ![deltlogo](deltlogo.png)![sliks](sliks.png)Delta2Sliks
-A C++ program to convert from the [DELTA](https://www.delta-intkey.com/) (**DE**scrition **L**anguage for **TA**xonomy) to the [SLIKS](http://www.stingersplace.com/SLIKS/) (**S**tinger's **L**ightweight **I**nteractive **K**ey **S**oftware) format.
+A C++ program to convert from the [DELTA](https://www.delta-intkey.com/) (**DE**scription **L**anguage for **TA**xonomy) to the [SLIKS](http://www.stingersplace.com/SLIKS/) (**S**tinger's **L**ightweight **I**nteractive **K**ey **S**oftware) format.
 
 Uses the [tDelta C++ class library](https://sourceforge.net/projects/freedelta/files/deltalib/new/) for reading DELTA files written by Denis Ziegler with amendments by Guillaume Rousse, Bastiaan Wakkie, and Mauro Cavalcanti.
 
@@ -7,7 +7,7 @@ Uses the [tDelta C++ class library](https://sourceforge.net/projects/freedelta/f
 
 ##### Installation
 
-Delta2Sliks does not have any special installation procedure; Just extract the contents of the distribution package (see the releases section) to any folder. The distribution package includes pre-compiled 64-bit versions for GNU/Linux and MS-Windows.
+Delta2Sliks does not have any special installation procedure; Just extract the contents of the distribution package (see the [Releases](https://github.com/maurobio/delta2sliks/releases) section) to any folder. The distribution package includes pre-compiled versions for GNU/Linux and MS-Windows (64-bit only) .
 
 ##### Usage
 

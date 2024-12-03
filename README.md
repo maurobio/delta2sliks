@@ -5,11 +5,11 @@ Uses the [tDelta C++ class library](https://sourceforge.net/projects/freedelta/f
 
 
 
-##### Installation
+### Installation
 
 Delta2Sliks does not have any special installation procedure; Just extract the contents of the distribution package (see the [Releases](https://github.com/maurobio/delta2sliks/releases) section) to any folder. The distribution package includes pre-compiled versions for GNU/Linux and MS-Windows (64-bit only) .
 
-##### Usage
+### Usage
 
 Delta2Sliks is a command line utility, to run it just open a terminal window in the installation folder and type
 

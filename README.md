@@ -7,7 +7,7 @@ Uses the [tDelta C++ class library](https://sourceforge.net/projects/freedelta/f
 
 ##### Installation
 
-Delta2Sliks does not have any special installation procedure; Just extract the contents of the distribution package (see the releases section) to any folder. The distribution package includes pre-compiled 32-bit and 64-bit versions for GNU/Linux and MS-Windows.
+Delta2Sliks does not have any special installation procedure; Just extract the contents of the distribution package (see the releases section) to any folder. The distribution package includes pre-compiled 64-bit versions for GNU/Linux and MS-Windows.
 
 ##### Usage
 

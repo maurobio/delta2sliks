@@ -13,7 +13,9 @@ No installation is required, just extract the archive of the distribution packag
 
 Delta2Sliks is a command line utility, to run it just open a terminal window in the installation folder and type
 
+```
 delta2sliks <chars_filename> <items_filename> [specs_filename]
+```
 
 where <chars_filename> and <items_filename> are compulsory and specs_filename is optional (but should be used to ensure the program will find the correct character types).
 

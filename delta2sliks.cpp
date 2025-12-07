@@ -68,15 +68,12 @@ int main(int argc, char** argv) {
   	
   	// Verify filenames arguments
   	if (argc < 3) {
-    	cout << "Usage : sliks <char_filename> <item_filename> [<specs_filename>]" << endl;
+    	cout << "Usage : sliks <char_filename> <item_filename> <specs_filename>" << endl;
     	return 0;
   	}
   	
   	// Creates CharList, ItemList and Specs objects and parses the corresponding text files 
-  	if (argc == 3)
-    	Dataset = new tDelta(argv[1], argv[2]);   // no specifications file
-  	else
-    	Dataset = new tDelta(argv[1], argv[2], argv[3]);
+  	Dataset = new tDelta(argv[1], argv[2], argv[3]);
     	
     if (!(Dataset->chars->is_parsed() && Dataset->items->is_parsed())) {
     	cout << "Error parsing characters and/or items description files" << endl;
@@ -142,18 +139,18 @@ int main(int argc, char** argv) {
     dirfile.open("delchars", ios::out); // Just yet another way of opening a file
     dirfile << "*SHOW ~ Translate into DELTA format, omitting numeric and text characters\n" << endl;
     dirfile << "*LISTING FILE delchars.lst\n" << endl;
-    dirfile << "*INPUT FILE specs_viola\n" << endl;
+    dirfile << "*INPUT FILE " << argv[3] << "\n" << endl;
     dirfile << "*EXCLUDE CHARACTERS " << excluded << endl << endl;
     dirfile << "*TRANSLATE INTO DELTA FORMAT\n" << endl;
     dirfile << "*OUTPUT FILE chars.new" << endl;
     dirfile << "*OUTPUT PARAMETERS" << endl;
     dirfile << "#SHOW " << title << endl << endl;
     dirfile << "#CHARACTER LIST" << endl;
-    dirfile << "*INPUT FILE chars_viola\n" << endl;
+    dirfile << "*INPUT FILE " << argv[1] << "\n" << endl;
     dirfile << "*OUTPUT FILE items.new" << endl;
     dirfile << "*OUTPUT PARAMETERS\n" << endl;
     dirfile << "#ITEM DESCRIPTIONS" << endl;
-    dirfile << "*INPUT FILE items_viola";
+    dirfile << "*INPUT FILE " << argv[2] << "\n";
     dirfile.close();
 	
     // Run CONFOR to exclude numeric and text characters

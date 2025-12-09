@@ -7,17 +7,17 @@ Uses the [tDelta C++ class library](https://sourceforge.net/projects/freedelta/f
 
 ### Installation
 
-No installation is required, just extract the archive of the distribution package (see the [Releases](https://github.com/maurobio/delta2sliks/releases) section) to any folder and start using the program. The distribution package includes pre-compiled versions for GNU/Linux and MS-Windows (64-bits only) .
+No installation is required, just extract the archive of the distribution package (see the [Releases](https://github.com/maurobio/delta2sliks/releases) section) to any folder and start using the program. The distribution package includes pre-compiled versions for GNU/Linux and MS-Windows (32 an 64-bits) .
 
 ### Usage
 
 Delta2Sliks is a command line utility, to run it just open a terminal window in the installation folder and type
 
 ```
-delta2sliks <chars_filename> <items_filename> [specs_filename]
+delta2sliks <chars_filename> <items_filename> <specs_filename>
 ```
 
-where <chars_filename> and <items_filename> are compulsory and specs_filename is optional (but should be used to ensure the program will find the correct character types).
+where <chars_filename>, <items_filename> and <specs_filename> are compulsory.
 
 The output will be files "chars.new" and "items.new" in DELTA format excluding numeric and text characters and file "data.js" containing the dataset translated into SLIKS format. See the SLIKS documentation on how to use it to create online interactive keys.
 
